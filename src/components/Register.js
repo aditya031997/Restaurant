@@ -9,6 +9,7 @@ export default class Register extends Component {
       email: null,
       location: null,
       rating: null,
+      password: null,
     };
   }
   create() {
@@ -58,6 +59,16 @@ export default class Register extends Component {
                   placeholder="enter location"
                   onChange={(e) => {
                     this.setState({ email: e.target.value });
+                  }}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="enter password"
+                  onChange={(e) => {
+                    this.setState({ password: e.target.value });
                   }}
                 />
               </Form.Group>
