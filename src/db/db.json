@@ -1,0 +1,46 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Pizza-Hut",
+      "location": "Khrar",
+      "email": "pizzahut@gmail.com",
+      "rating": "4.5"
+    },
+    {
+      "id": 2,
+      "name": "Burger-kING",
+      "location": "Mohali",
+      "email": "burgerking@gmail.com",
+      "rating": "4.3"
+    },
+    {
+      "id": 3,
+      "name": "McDonald",
+      "location": "Chandigarh",
+      "email": "mcdonald@gmail.com",
+      "rating": "4.4"
+    },
+    {
+      "id": 4,
+      "name": "Dominos",
+      "location": "Jalandhar",
+      "email": "dominos@gmail.com",
+      "rating": "4.5"
+    },
+    {
+      "id": 5,
+      "name": "Subway",
+      "location": "Phagwara",
+      "email": "subway@gmail.com",
+      "rating": "3.6"
+    },
+    {
+      "name": "Kfc",
+      "email": "kfc@gmail.com",
+      "location": "Noida",
+      "rating": "3.6",
+      "id": 6
+    }
+  ]
+}
