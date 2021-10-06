@@ -46,7 +46,7 @@ export default class Register extends Component {
                 <Form.Label>Location</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter email"
+                  placeholder="Enter Location"
                   onChange={(e) => {
                     this.setState({ location: e.target.value });
                   }}
@@ -56,7 +56,7 @@ export default class Register extends Component {
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder="enter location"
+                  placeholder="enter email"
                   onChange={(e) => {
                     this.setState({ email: e.target.value });
                   }}
@@ -90,6 +90,15 @@ export default class Register extends Component {
                 }}
               >
                 Register
+              </Button>
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={() => {
+                  this.create();
+                }}
+              >
+                Back
               </Button>
             </Form>
           </Card>

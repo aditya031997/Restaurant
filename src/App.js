@@ -18,7 +18,7 @@ function App() {
           <Route path="/detail" component={Detail} />
           <Route path="/list" component={List} />
           <Route path="/search" component={Search} />
-          <Route path="/update" component={Update} />
+          <Route path="/update/:id" render={(props) => <Update {...props} />} />
         </Switch>
       </BrowserRouter>
     </div>

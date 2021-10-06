@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container, Table } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./style.css";
 export default class List extends Component {
@@ -10,9 +12,27 @@ export default class List extends Component {
     };
   }
   componentDidMount() {
+    this.getData();
+  }
+  getData() {
     fetch("http://localhost:3000/restaurant").then((resp) => {
       resp.json().then((result) => {
         this.setState({ list: result });
+      });
+    });
+  }
+
+  delete(id) {
+    fetch("http://localhost:3000/restaurant/" + id, {
+      method: "DELETE",
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
+      // body: JSON.stringify(this.state),
+    }).then((resp) => {
+      resp.json().then((result) => {
+        alert("Deleted");
+        this.getData();
       });
     });
   }
@@ -46,7 +66,12 @@ export default class List extends Component {
                       <td>{item.location}</td>
                       <td>{item.rating}</td>
                       <td>
-                        <Link to="/edit">Edit</Link>
+                        <Link to={"/update/" + item.id}>
+                          <FontAwesomeIcon icon={faEdit} />
+                        </Link>
+                        <span onClick={() => this.delete(item.id)}>
+                          <FontAwesomeIcon icon={faTrash} />
+                        </span>
                       </td>
                     </tr>
                   ))}
